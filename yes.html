@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Monthsary babe!</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .countdown-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px 0;
+      }
+      
+      .countdown-box {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        min-width: 80px;
+        text-align: center;
+      }
+      
+      .countdown-number {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+      
+      .countdown-label {
+        font-size: 0.9rem;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="tenor-gif-embed"
+        data-postid="253027946666209433"
+        data-share-method="host"
+        data-aspect-ratio="1.37853"
+        data-width="100%"
+      >
+        <a
+          href="https://tenor.com/view/mochi-cat-mochi-and-goma-goma-and-peach-mochi-mochi-peach-cat-gif-gif-253027946666209433"
+          >Mochi Cat GIF</a
+        >from <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+      
+      <div class="countdown-container">
+        <div class="countdown-box">
+          <div id="days" class="countdown-number">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-box">
+          <div id="hours" class="countdown-number">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-box">
+          <div id="minutes" class="countdown-number">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-box">
+          <div id="seconds" class="countdown-number">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+
+      <h1>Hehehehe, I knew it! Love u babe 😘</h1>
+      <h1>Happy Monthsary babe! 😘</h1>
+    </div>
+
+    <script>
+      function updateCountdown() {
+        const monthsaryDate = new Date('June 1, 2024 00:00:00').getTime();
+        
+        function update() {
+          const now = new Date().getTime();
+          const distance = monthsaryDate - now;
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById('days').textContent = String(days).padStart(2, '0');
+          document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+          document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+          document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        update();
+        setInterval(update, 1000);
+      }
+
+      updateCountdown();
+    </script>
+  </body>
+</html>
